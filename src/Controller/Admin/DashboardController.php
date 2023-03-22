@@ -2,7 +2,10 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Actors;
+use App\Entity\Products;
 use App\Entity\User;
+use App\Entity\Warehouses;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -28,5 +31,10 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class)
             ->setPermission('ROLE_ADMIN');
+
+        yield MenuItem::subMenu('Warehouse/Product', 'fa fa-list')->setSubItems([
+            MenuItem::linkToCrud('Warehouse ', 'fa fa-bars', Warehouses::class),
+            MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class)
+        ]);
     }
 }
