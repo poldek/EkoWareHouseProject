@@ -20,7 +20,7 @@ class Products
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column(options: ['default' => 0])]
     private ?int $qty = null;
 
     #[ORM\Column(length: 255)]
@@ -46,6 +46,7 @@ class Products
 
     public function __construct()
     {
+        $this->qty = 0;
         $this->createdAt = new \DateTimeImmutable();
     }
 

@@ -29,7 +29,7 @@ class ProductsCrudController extends AbstractCrudController
             PercentField::new('vat','Vat rate')->setColumns(2),
             FormField::addRow(),
             TextField::new('unit', 'Unit')->setColumns(2),
-            IntegerField::new('qty','Qty')->setColumns(2),
+            NumberField::new('qty','Qty')->setColumns(2),
         ];
     }
 }
