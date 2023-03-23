@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="">
+
       <change afterPath="$PROJECT_DIR$/src/Security/HashedPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" afterDir="false" />
+
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ProductsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/WarehousesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
