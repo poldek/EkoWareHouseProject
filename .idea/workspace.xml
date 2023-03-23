@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Security/HashedPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
