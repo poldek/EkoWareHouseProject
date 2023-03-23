@@ -28,6 +28,7 @@ class Warehouses
     #[ORM\Column]
     private ?int $number = null;
 
+
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
@@ -84,5 +85,10 @@ class Warehouses
         $this->number = $number;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return  $this->name;
     }
 }
