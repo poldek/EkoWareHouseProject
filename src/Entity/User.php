@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -20,7 +22,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: UuidType::NAME, unique: true)]
     #[ORM\GeneratedValue(strategy: 'CUSTOM')]
     #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
-    private ?Uuid $uuid = null;
+    private ?Uuid $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
     private ?string $username = null;
@@ -37,27 +39,50 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\ManyToMany(targetEntity: Warehouses::class)]
+    private Collection $warehouse;
+
+
     public function __construct()
     {
         $this->setRoles(self::TYPE_USER);
         $this->createdAt = new \DateTimeImmutable();
+        $this->warehouse = new ArrayCollection();
     }
 
     /**
      * @return Uuid|null
      */
-    public function getUuid(): ?Uuid
+    public function getId(): ?Uuid
     {
-        return $this->uuid;
+        return $this->id;
     }
 
     /**
-     * @param Uuid|null $uuid
+     * @param Uuid|null $id
      */
-    public function setUuid(?Uuid $uuid): void
+    public function setId(?Uuid $id): void
     {
-        $this->uuid = $uuid;
+        $this->id = $id;
     }
+
+
+
+//    /**
+//     * @return Uuid|null
+//     */
+//    public function getUuid(): ?Uuid
+//    {
+//        return $this->id;
+//    }
+//
+//    /**
+//     * @param Uuid|null $id
+//     */
+//    public function setUuid(?Uuid $id): void
+//    {
+//        $this->id = $id;
+//    }
 
     public function getUsername(): ?string
     {
@@ -132,6 +157,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Warehouses>
+     */
+    public function getWarehouse(): Collection
+    {
+        return $this->warehouse;
+    }
+
+    public function addWarehouse(Warehouses $warehouse): self
+    {
+        if (!$this->warehouse->contains($warehouse)) {
+            $this->warehouse->add($warehouse);
+        }
+
+        return $this;
+    }
+
+    public function removeWarehouse(Warehouses $warehouse): self
+    {
+        $this->warehouse->removeElement($warehouse);
 
         return $this;
     }

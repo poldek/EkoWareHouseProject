@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\KeyValueStore;
 use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -44,9 +45,8 @@ class UserCrudController extends AbstractCrudController
                     'mapped' => false,
                 ])
                 ->setRequired($pageName === Crud::PAGE_NEW)
-                ->onlyOnForms()
-
-            ,
+                ->onlyOnForms(),
+            AssociationField::new('warehouse')->onlyOnForms(),
             DateField::new('createdAt')->onlyOnIndex(),
         ];
     }
