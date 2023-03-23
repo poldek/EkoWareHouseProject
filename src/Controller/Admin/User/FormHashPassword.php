@@ -2,13 +2,13 @@
 
 namespace App\Controller\Admin\User;
 
-use App\Entity\User;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use App\Security\HashedPassword;
+
 
 class FormHashPassword
 {
     public function __construct(
-        public UserPasswordHasherInterface $userPasswordHasher
+        public HashedPassword $password
     ) {}
 
     public function hashPassword()
@@ -23,9 +23,7 @@ class FormHashPassword
             if ($password === null) {
                 return;
             }
-            $user = new User();
-            $hash = $this->userPasswordHasher->hashPassword($user, $password);
-            $form->getData()->setPassword($hash);
+            $form->getData()->setPassword($this->password->hasherPassword($password));
         };
     }
 }
