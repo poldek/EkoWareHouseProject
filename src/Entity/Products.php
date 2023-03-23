@@ -23,9 +23,6 @@ class Products
     #[ORM\Column(options: ['default' => 0])]
     private ?int $qty = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $unit = null;
-
     #[ORM\Column]
     private ?float $vat = null;
 
@@ -43,6 +40,11 @@ class Products
 
     #[ORM\Column(length: 255)]
     private ?string $index_product = null;
+
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?ProductUnit $unit = null;
+
 
     public function __construct()
     {
@@ -79,17 +81,6 @@ class Products
         return $this;
     }
 
-    public function getUnit(): ?string
-    {
-        return $this->unit;
-    }
-
-    public function setUnit(string $unit): self
-    {
-        $this->unit = $unit;
-
-        return $this;
-    }
 
     public function getVat(): ?float
     {
@@ -135,6 +126,18 @@ class Products
     public function setIndexProduct(string $index_product): self
     {
         $this->index_product = $index_product;
+
+        return $this;
+    }
+
+    public function getUnit(): ?ProductUnit
+    {
+        return $this->unit;
+    }
+
+    public function setUnit(?ProductUnit $unit): self
+    {
+        $this->unit = $unit;
 
         return $this;
     }

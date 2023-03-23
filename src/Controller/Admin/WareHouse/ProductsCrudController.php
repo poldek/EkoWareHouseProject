@@ -4,8 +4,8 @@ namespace App\Controller\Admin\WareHouse;
 
 use App\Entity\Products;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\PercentField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -28,7 +28,7 @@ class ProductsCrudController extends AbstractCrudController
             NumberField::new('price', 'Price')->setNumDecimals(2)->setColumns(2),
             PercentField::new('vat','Vat rate')->setColumns(2),
             FormField::addRow(),
-            TextField::new('unit', 'Unit')->setColumns(2),
+            AssociationField::new('unit', 'Unit product')->setColumns(2),
             NumberField::new('qty','Qty')->setColumns(2),
         ];
     }
