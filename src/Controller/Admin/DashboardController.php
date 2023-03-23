@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Actors;
 use App\Entity\Products;
+use App\Entity\ProductUnit;
 use App\Entity\User;
 use App\Entity\Warehouses;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -34,7 +35,8 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::subMenu('Warehouse/Product', 'fa fa-list')->setSubItems([
             MenuItem::linkToCrud('Warehouse ', 'fa fa-bars', Warehouses::class),
-            MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class)
+            MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class),
+            MenuItem::linkToCrud('Unit', 'fa fa-bars', ProductUnit::class)
         ]);
     }
 }
