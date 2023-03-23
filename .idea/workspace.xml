@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="">
+
+      <change afterPath="$PROJECT_DIR$/src/Security/HashedPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" afterDir="false" />
+
       <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
@@ -11,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="function/WareHouse" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -212,7 +218,8 @@
       <workItem from="1679498483444" duration="543000" />
       <workItem from="1679499645965" duration="1742000" />
       <workItem from="1679501822976" duration="154000" />
-      <workItem from="1679501989048" duration="8768000" />
+      <workItem from="1679501989048" duration="10364000" />
+      <workItem from="1679557462967" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -235,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679497733935</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation">
+      <created>1679511070907</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679511070907</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +301,7 @@
     <MESSAGE value="--First init&#10;&#10;-- create project &#10;-- first configure" />
     <MESSAGE value="Security rule&#10;&#10;-- create user auth class&#10;-- create login page&#10;-- added redirect after login&#10;-- install easyadmin and redirect user after login" />
     <MESSAGE value="Security&#10;&#10;-- create\update user &#10;-- setting permission to user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Security&#10;&#10;-- create\update user &#10;-- setting permission to user" />
+    <MESSAGE value="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation" />
   </component>
 </project>
