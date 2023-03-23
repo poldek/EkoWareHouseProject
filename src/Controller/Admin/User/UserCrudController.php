@@ -36,17 +36,17 @@ class UserCrudController extends AbstractCrudController
                     'type' => PasswordType::class,
                     'first_options' => [
                         'label' => 'Password',
-                        'attr' => array('style' => 'width: 555px'),
+                        'attr' => array('style' => 'max-width: 555px'),
                     ],
                     'second_options' => [
                         'label' => '(Repeat)',
-                        'attr' => array('style' => 'width: 555px'),
+                        'attr' => array('style' => 'max-width: 555px'),
                     ],
                     'mapped' => false,
                 ])
                 ->setRequired($pageName === Crud::PAGE_NEW)
                 ->onlyOnForms(),
-            AssociationField::new('warehouse')->onlyOnForms(),
+            AssociationField::new('warehouses')->onlyOnForms(),
             DateField::new('createdAt')->onlyOnIndex(),
         ];
     }
