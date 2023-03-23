@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\WarehousesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -28,10 +30,14 @@ class Warehouses
     #[ORM\Column]
     private ?int $number = null;
 
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'warehouses')]
+    private Collection $users;
+
 
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -90,5 +96,32 @@ class Warehouses
     public function __toString(): string
     {
         return  $this->name;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users->add($user);
+            $user->addWarehouse($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            $user->removeWarehouse($this);
+        }
+
+        return $this;
     }
 }

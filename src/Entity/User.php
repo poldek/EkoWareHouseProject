@@ -39,15 +39,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
-    #[ORM\ManyToMany(targetEntity: Warehouses::class)]
-    private Collection $warehouse;
+    #[ORM\ManyToMany(targetEntity: Warehouses::class, inversedBy: 'users')]
+    private Collection $warehouses;
 
 
     public function __construct()
     {
         $this->setRoles(self::TYPE_USER);
         $this->createdAt = new \DateTimeImmutable();
-        $this->warehouse = new ArrayCollection();
+        $this->warehouses = new ArrayCollection();
+
     }
 
     /**
@@ -66,23 +67,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->id = $id;
     }
 
-
-
-//    /**
-//     * @return Uuid|null
-//     */
-//    public function getUuid(): ?Uuid
-//    {
-//        return $this->id;
-//    }
-//
-//    /**
-//     * @param Uuid|null $id
-//     */
-//    public function setUuid(?Uuid $id): void
-//    {
-//        $this->id = $id;
-//    }
 
     public function getUsername(): ?string
     {
@@ -164,15 +148,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @return Collection<int, Warehouses>
      */
-    public function getWarehouse(): Collection
+    public function getWarehouses(): Collection
     {
-        return $this->warehouse;
+        return $this->warehouses;
     }
 
     public function addWarehouse(Warehouses $warehouse): self
     {
-        if (!$this->warehouse->contains($warehouse)) {
-            $this->warehouse->add($warehouse);
+        if (!$this->warehouses->contains($warehouse)) {
+            $this->warehouses->add($warehouse);
         }
 
         return $this;
@@ -180,8 +164,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function removeWarehouse(Warehouses $warehouse): self
     {
-        $this->warehouse->removeElement($warehouse);
+        $this->warehouses->removeElement($warehouse);
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return  $this->username;
     }
 }
