@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation">
+    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="WareHouse&#10;&#10;-- added new name input">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Delivery/DeliveryProduct.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/Type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/TypeDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/WarehouseProducts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentProductsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentTypeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/WarehouseProductsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/delivery/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Warehouses.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard/dashboard.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="function/WareHouse" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -184,6 +198,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin/dashboard" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/src/Controller/Admin" />
     </key>
   </component>
@@ -211,7 +227,7 @@
       <workItem from="1679501989048" duration="10364000" />
       <workItem from="1679557462967" duration="299000" />
       <workItem from="1679568500576" duration="20616000" />
-      <workItem from="1679647498185" duration="54000" />
+      <workItem from="1679647498185" duration="17075000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -255,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679589695341</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="WareHouse&#10;&#10;-- added new name input">
+      <created>1679647870774</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679647870774</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +333,7 @@
     <MESSAGE value="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation" />
     <MESSAGE value="User&#10;&#10;-- assigning warehouses to the user" />
     <MESSAGE value="WareHouse&#10;&#10;-- assigning a user from the warehouse" />
-    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- assigning a user from the warehouse" />
+    <MESSAGE value="WareHouse&#10;&#10;-- added new name input" />
+    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- added new name input" />
   </component>
 </project>

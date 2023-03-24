@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -45,11 +47,15 @@ class Products
     #[ORM\JoinColumn(nullable: false)]
     private ?ProductUnit $unit = null;
 
+    #[ORM\OneToMany(mappedBy: 'product', targetEntity: DocumentProducts::class)]
+    private Collection $documentProducts;
+
 
     public function __construct()
     {
         $this->qty = 0;
         $this->createdAt = new \DateTimeImmutable();
+        $this->documentProducts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -138,6 +144,36 @@ class Products
     public function setUnit(?ProductUnit $unit): self
     {
         $this->unit = $unit;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, DocumentProducts>
+     */
+    public function getDocumentProducts(): Collection
+    {
+        return $this->documentProducts;
+    }
+
+    public function addDocumentProduct(DocumentProducts $documentProduct): self
+    {
+        if (!$this->documentProducts->contains($documentProduct)) {
+            $this->documentProducts->add($documentProduct);
+            $documentProduct->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocumentProduct(DocumentProducts $documentProduct): self
+    {
+        if ($this->documentProducts->removeElement($documentProduct)) {
+            // set the owning side to null (unless already changed)
+            if ($documentProduct->getProduct() === $this) {
+                $documentProduct->setProduct(null);
+            }
+        }
 
         return $this;
     }
