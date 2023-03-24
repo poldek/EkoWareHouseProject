@@ -33,11 +33,15 @@ class Warehouses
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'warehouses')]
     private Collection $users;
 
+    #[ORM\OneToMany(mappedBy: 'warehouse', targetEntity: Documents::class)]
+    private Collection $documents;
+
 
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
         $this->users = new ArrayCollection();
+        $this->documents = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -120,6 +124,36 @@ class Warehouses
     {
         if ($this->users->removeElement($user)) {
             $user->removeWarehouse($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Documents>
+     */
+    public function getDocuments(): Collection
+    {
+        return $this->documents;
+    }
+
+    public function addDocument(Documents $document): self
+    {
+        if (!$this->documents->contains($document)) {
+            $this->documents->add($document);
+            $document->setWarehouse($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocument(Documents $document): self
+    {
+        if ($this->documents->removeElement($document)) {
+            // set the owning side to null (unless already changed)
+            if ($document->getWarehouse() === $this) {
+                $document->setWarehouse(null);
+            }
         }
 
         return $this;

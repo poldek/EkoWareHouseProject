@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+
+use App\Controller\Admin\Service\DocumentType\TypeDocument;
 use App\Entity\Products;
 use App\Entity\ProductUnit;
 use App\Entity\User;
@@ -14,10 +16,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
+
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return $this->render('admin/dashboard.html.twig');
+        return $this->render('admin/dashboard/dashboard.html.twig');
     }
 
     public function configureDashboard(): Dashboard
@@ -37,5 +40,6 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class),
             MenuItem::linkToCrud('Unit', 'fa fa-bars', ProductUnit::class)
         ]);
+        yield MenuItem::linkToRoute('Delivery','fa fa-list','app_delivery');
     }
 }
