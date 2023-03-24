@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="">
-
-
-      <change afterPath="$PROJECT_DIR$/src/Security/HashedPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/FormHashPassword.php" afterDir="false" />
-
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ProductsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/WarehousesRepository.php" afterDir="false" />
+    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/User/UserCrudController.php" afterDir="false" />
-
-
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="function/WareHouse" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -184,12 +170,14 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/szycha/PhpstormProjects/PanelTeleMedycyna&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/szycha/PhpstormProjects/EkoWareHouseProject&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -222,6 +210,8 @@
       <workItem from="1679501822976" duration="154000" />
       <workItem from="1679501989048" duration="10364000" />
       <workItem from="1679557462967" duration="299000" />
+      <workItem from="1679568500576" duration="20616000" />
+      <workItem from="1679647498185" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -251,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679511070907</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="User&#10;&#10;-- assigning warehouses to the user">
+      <created>1679571879810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679571879810</updated>
+    </task>
+    <task id="LOCAL-00006" summary="WareHouse&#10;&#10;-- assigning a user from the warehouse">
+      <created>1679589695341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679589695341</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +308,8 @@
     <MESSAGE value="Security rule&#10;&#10;-- create user auth class&#10;-- create login page&#10;-- added redirect after login&#10;-- install easyadmin and redirect user after login" />
     <MESSAGE value="Security&#10;&#10;-- create\update user &#10;-- setting permission to user" />
     <MESSAGE value="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- added warehouse table and added to menu admin &#10;-- added product table and added to menu admin &#10;-- added simple validation" />
+    <MESSAGE value="User&#10;&#10;-- assigning warehouses to the user" />
+    <MESSAGE value="WareHouse&#10;&#10;-- assigning a user from the warehouse" />
+    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- assigning a user from the warehouse" />
   </component>
 </project>

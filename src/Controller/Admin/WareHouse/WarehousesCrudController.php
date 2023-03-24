@@ -26,13 +26,13 @@ class WarehousesCrudController extends AbstractCrudController
     {
         return [
             IntegerField::new('number','Unique number Warehouse'),
-            TextField::new('name'),
+            TextField::new('name', 'Name'),
             DateField::new('createdAt')->onlyOnIndex(),
-            TextEditorField::new('description')->onlyOnForms(),
-            AssociationField::new('users')
+            AssociationField::new('users', 'User')
                 ->setFormTypeOptions([
                     'by_reference' => false,
-                ])
+                ]),
+            TextEditorField::new('description')->onlyOnForms(),
         ];
     }
 }
