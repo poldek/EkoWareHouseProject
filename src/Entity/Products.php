@@ -5,12 +5,10 @@ namespace App\Entity;
 use App\Repository\ProductsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Validator\Constraints as Assert;
 
-#[UniqueEntity('index_product','a index with the given number already exists')]
+#[UniqueEntity('product_code','a index with the given number already exists')]
 #[ORM\Entity(repositoryClass: ProductsRepository::class)]
 class Products
 {
@@ -22,26 +20,12 @@ class Products
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(options: ['default' => 0])]
-    private ?int $qty = null;
-
-    #[ORM\Column]
-    private ?float $vat = null;
-
-    #[Assert\Length(
-        min: 1,
-        max: 9,
-        minMessage: 'Incorrect amount',
-        maxMessage: 'incorrect amount',
-    )]
-    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
-    private ?string $price = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $index_product = null;
+    private ?string $product_code = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
@@ -50,12 +34,15 @@ class Products
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: DocumentProducts::class)]
     private Collection $documentProducts;
 
+    #[ORM\ManyToMany(targetEntity: Warehouses::class, inversedBy: 'products')]
+    private Collection $warehouses;
+
 
     public function __construct()
     {
-        $this->qty = 0;
         $this->createdAt = new \DateTimeImmutable();
         $this->documentProducts = new ArrayCollection();
+        $this->warehouses = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -75,42 +62,6 @@ class Products
         return $this;
     }
 
-    public function getQty(): ?int
-    {
-        return $this->qty;
-    }
-
-    public function setQty(?int $qty): self
-    {
-        $this->qty = $qty;
-
-        return $this;
-    }
-
-
-    public function getVat(): ?float
-    {
-        return $this->vat;
-    }
-
-    public function setVat(float $vat): self
-    {
-        $this->vat = $vat;
-
-        return $this;
-    }
-
-    public function getPrice(): ?string
-    {
-        return $this->price;
-    }
-
-    public function setPrice(string $price): self
-    {
-        $this->price = $price;
-
-        return $this;
-    }
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
@@ -124,14 +75,14 @@ class Products
         return $this;
     }
 
-    public function getIndexProduct(): ?string
+    public function getProductCode(): ?string
     {
-        return $this->index_product;
+        return $this->product_code;
     }
 
-    public function setIndexProduct(string $index_product): self
+    public function setProductCode(string $product_code): self
     {
-        $this->index_product = $index_product;
+        $this->product_code = $product_code;
 
         return $this;
     }
@@ -174,6 +125,35 @@ class Products
                 $documentProduct->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return Collection<int, Warehouses>
+     */
+    public function getWarehouses(): Collection
+    {
+        return $this->warehouses;
+    }
+
+    public function addWarehouse(Warehouses $warehouse): self
+    {
+        if (!$this->warehouses->contains($warehouse)) {
+            $this->warehouses->add($warehouse);
+        }
+
+        return $this;
+    }
+
+    public function removeWarehouse(Warehouses $warehouse): self
+    {
+        $this->warehouses->removeElement($warehouse);
 
         return $this;
     }

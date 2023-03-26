@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="WareHouse&#10;&#10;-- added new name input">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Delivery/DeliveryProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/TypeDocument.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/WarehouseProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentProductsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentTypeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/WarehouseProductsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/delivery/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminDelivery/DocumentsCrudController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/User/Product/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/DocumentProductType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/warehouse/products/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/Delivery/DeliveryProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Documents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ProductUnit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProductUnit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Warehouses.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/delivery/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +200,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/User/Warehouse" />
       <recent name="$PROJECT_DIR$/templates/admin/dashboard" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/src/Controller/Admin" />
@@ -228,6 +231,9 @@
       <workItem from="1679557462967" duration="299000" />
       <workItem from="1679568500576" duration="20616000" />
       <workItem from="1679647498185" duration="17075000" />
+      <workItem from="1679675116474" duration="1918000" />
+      <workItem from="1679759015317" duration="6556000" />
+      <workItem from="1679817087693" duration="14330000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>

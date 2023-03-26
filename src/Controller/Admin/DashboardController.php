@@ -2,8 +2,6 @@
 
 namespace App\Controller\Admin;
 
-
-use App\Controller\Admin\Service\DocumentType\TypeDocument;
 use App\Entity\Products;
 use App\Entity\ProductUnit;
 use App\Entity\User;
@@ -31,7 +29,8 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToDashboard('Dashboard admin', 'fa fa-home');
+        yield MenuItem::linkToRoute('Dashboard user', 'fa fa-home','app_home');
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class)
             ->setPermission('ROLE_ADMIN');
 
@@ -39,7 +38,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Warehouse ', 'fa fa-bars', Warehouses::class),
             MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class),
             MenuItem::linkToCrud('Unit', 'fa fa-bars', ProductUnit::class)
-        ]);
-        yield MenuItem::linkToRoute('Delivery','fa fa-list','app_delivery');
+        ])->setPermission('ROLE_ADMIN');
+        //yield MenuItem::linkToCrud('DeliveryUser', 'fa fa-bars', Documents::class);
     }
 }

@@ -27,10 +27,10 @@ class Documents
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at;
 
-    #[ORM\ManyToOne(inversedBy: 'documents')]
+    #[ORM\ManyToOne(inversedBy: 'documents' ,cascade: ['persist'])]
     private ?DocumentType $type = null;
 
-    #[ORM\OneToMany(mappedBy: 'document', targetEntity: DocumentProducts::class)]
+    #[ORM\OneToMany(mappedBy: 'document', targetEntity: DocumentProducts::class, cascade: ['persist','remove'])]
     private Collection $documentProducts;
 
 

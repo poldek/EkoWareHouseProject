@@ -23,7 +23,16 @@ class DocumentProducts
     private ?Products $product = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
-    private ?string $document_price = null;
+    private ?string $product_price = null;
+
+    #[ORM\Column]
+    private ?int $product_qty = null;
+
+    #[ORM\ManyToOne(inversedBy: 'documentProducts')]
+    private ?ProductUnit $unit = null;
+
+    #[ORM\Column]
+    private ?float $tax = null;
 
     public function getId(): ?int
     {
@@ -54,14 +63,50 @@ class DocumentProducts
         return $this;
     }
 
-    public function getDocumentPrice(): ?string
+    public function getProductPrice(): ?string
     {
-        return $this->document_price;
+        return $this->product_price;
     }
 
-    public function setDocumentPrice(string $document_price): self
+    public function setProductPrice(string $product_price): self
     {
-        $this->document_price = $document_price;
+        $this->product_price = $product_price;
+
+        return $this;
+    }
+
+    public function getProductQty(): ?int
+    {
+        return $this->product_qty;
+    }
+
+    public function setProductQty(int $product_qty): self
+    {
+        $this->product_qty = $product_qty;
+
+        return $this;
+    }
+
+    public function getUnit(): ?ProductUnit
+    {
+        return $this->unit;
+    }
+
+    public function setUnit(?ProductUnit $unit): self
+    {
+        $this->unit = $unit;
+
+        return $this;
+    }
+
+    public function getTax(): ?float
+    {
+        return $this->tax;
+    }
+
+    public function setTax(float $tax): self
+    {
+        $this->tax = $tax;
 
         return $this;
     }

@@ -23,9 +23,13 @@ class ProductUnit
     #[ORM\OneToMany(mappedBy: 'unit', targetEntity: Products::class)]
     private Collection $products;
 
+    #[ORM\OneToMany(mappedBy: 'unit', targetEntity: DocumentProducts::class)]
+    private Collection $documentProducts;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
+        $this->documentProducts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -74,6 +78,36 @@ class ProductUnit
             // set the owning side to null (unless already changed)
             if ($product->getUnit() === $this) {
                 $product->setUnit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, DocumentProducts>
+     */
+    public function getDocumentProducts(): Collection
+    {
+        return $this->documentProducts;
+    }
+
+    public function addDocumentProduct(DocumentProducts $documentProduct): self
+    {
+        if (!$this->documentProducts->contains($documentProduct)) {
+            $this->documentProducts->add($documentProduct);
+            $documentProduct->setUnit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocumentProduct(DocumentProducts $documentProduct): self
+    {
+        if ($this->documentProducts->removeElement($documentProduct)) {
+            // set the owning side to null (unless already changed)
+            if ($documentProduct->getUnit() === $this) {
+                $documentProduct->setUnit(null);
             }
         }
 
