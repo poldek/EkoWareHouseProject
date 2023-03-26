@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="WareHouse&#10;&#10;-- added new name input">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminDelivery/DocumentsCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/User/Product/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/DocumentProductType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/warehouse/products/index.html.twig" afterDir="false" />
+    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/User/Delivery/SearchProduct.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/warehouse/delivery/delivery_product.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/warehouse/delivery/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/Delivery/DeliveryProduct.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DocumentProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Documents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ProductUnit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProductUnit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Warehouses.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/delivery/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/warehouse/products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/warehouse/products/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +221,7 @@
       <workItem from="1679647498185" duration="17075000" />
       <workItem from="1679675116474" duration="1918000" />
       <workItem from="1679759015317" duration="6556000" />
-      <workItem from="1679817087693" duration="14330000" />
+      <workItem from="1679817087693" duration="23320000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -284,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679647870774</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="User&#10;&#10;-- added panel user&#10;-- added select warehouse and product&#10;-- added security rule">
+      <created>1679831790172</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679831790172</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +335,7 @@
     <MESSAGE value="User&#10;&#10;-- assigning warehouses to the user" />
     <MESSAGE value="WareHouse&#10;&#10;-- assigning a user from the warehouse" />
     <MESSAGE value="WareHouse&#10;&#10;-- added new name input" />
-    <option name="LAST_COMMIT_MESSAGE" value="WareHouse&#10;&#10;-- added new name input" />
+    <MESSAGE value="User&#10;&#10;-- added panel user&#10;-- added select warehouse and product&#10;-- added security rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="User&#10;&#10;-- added panel user&#10;-- added select warehouse and product&#10;-- added security rule" />
   </component>
 </project>
