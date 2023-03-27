@@ -16,22 +16,21 @@ class Documents
     #[ORM\Column]
     private ?int $id = null;
 
-
-    #[ORM\ManyToOne(inversedBy: 'documents')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Warehouses $warehouse = null;
-
     #[ORM\Column]
     private ?\DateTimeImmutable $document_date = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at;
 
-    #[ORM\ManyToOne(inversedBy: 'documents' ,cascade: ['persist'])]
-    private ?DocumentType $type = null;
 
     #[ORM\OneToMany(mappedBy: 'document', targetEntity: DocumentProducts::class, cascade: ['persist','remove'])]
     private Collection $documentProducts;
+
+    #[ORM\Column]
+    private ?bool $status = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $type = null;
 
 
     public function __construct()
@@ -45,18 +44,6 @@ class Documents
         return $this->id;
     }
 
-
-    public function getWarehouse(): ?Warehouses
-    {
-        return $this->warehouse;
-    }
-
-    public function setWarehouse(?Warehouses $warehouse): self
-    {
-        $this->warehouse = $warehouse;
-
-        return $this;
-    }
 
     public function getDocumentDate(): ?\DateTimeImmutable
     {
@@ -78,18 +65,6 @@ class Documents
     public function setCreatedAt(\DateTimeImmutable $created_at): self
     {
         $this->created_at = $created_at;
-
-        return $this;
-    }
-
-    public function getType(): ?DocumentType
-    {
-        return $this->type;
-    }
-
-    public function setType(?DocumentType $type): self
-    {
-        $this->type = $type;
 
         return $this;
     }
@@ -120,6 +95,30 @@ class Documents
                 $documentProduct->setDocument(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isStatus(): ?bool
+    {
+        return $this->status;
+    }
+
+    public function setStatus(bool $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }

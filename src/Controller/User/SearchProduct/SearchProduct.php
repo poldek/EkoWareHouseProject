@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\User\Delivery;
+namespace App\Controller\User\SearchProduct;
 
 use App\Entity\Products;
 use App\Repository\ProductsRepository;
@@ -29,7 +29,6 @@ class SearchProduct
 
         $ifExist = array_search($search, $products);
         if (!$ifExist) return false;
-
         return $this->productsRepository->findOneBy([
             'product_code' => $search
         ]);

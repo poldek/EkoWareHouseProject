@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Delivery product{% endblock %}
+{% block title %}Issue product{% endblock %}
 
 {% block body %}
     <div class="example-wrapper">
         <h3>Product: {{ product.name }}</h3>
         <p>Code product: {{ product.productCode }}</p>
-        <a href="{{ path('app_delivery')}}"> <- Back</a>
+        <a href="{{ path('app_issue')}}"> <- Back</a>
         <hr>
-        {{ form_start(form) }}
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </div>
