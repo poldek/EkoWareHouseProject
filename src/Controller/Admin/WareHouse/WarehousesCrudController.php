@@ -28,7 +28,7 @@ class WarehousesCrudController extends AbstractCrudController
             IntegerField::new('number','Unique number Warehouse'),
             TextField::new('name', 'Name'),
             DateField::new('createdAt')->onlyOnIndex(),
-            AssociationField::new('users', 'User')
+            AssociationField::new('users', 'Warehouse')
                 ->setFormTypeOptions([
                     'by_reference' => false,
                 ]),

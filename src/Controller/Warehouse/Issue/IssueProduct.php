@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Controller\User\Issue;
+namespace App\Controller\Warehouse\Issue;
 
 use App\Entity\DocumentProducts;
-use App\Form\DeliveryProductType;
 use App\Form\IssueProductType;
 use App\Repository\ProductsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -32,11 +32,15 @@ class Documents
     #[ORM\Column(length: 255)]
     private ?string $type = null;
 
+    #[ORM\OneToMany(mappedBy: 'document', targetEntity: DocumentFile::class)]
+    private Collection $documentFiles;
+
 
     public function __construct()
     {
         $this->created_at = new \DateTimeImmutable();
         $this->documentProducts = new ArrayCollection();
+        $this->documentFiles = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -119,6 +123,36 @@ class Documents
     public function setType(string $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, DocumentFile>
+     */
+    public function getDocumentFiles(): Collection
+    {
+        return $this->documentFiles;
+    }
+
+    public function addDocumentFile(DocumentFile $documentFile): self
+    {
+        if (!$this->documentFiles->contains($documentFile)) {
+            $this->documentFiles->add($documentFile);
+            $documentFile->setDocument($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocumentFile(DocumentFile $documentFile): self
+    {
+        if ($this->documentFiles->removeElement($documentFile)) {
+            // set the owning side to null (unless already changed)
+            if ($documentFile->getDocument() === $this) {
+                $documentFile->setDocument(null);
+            }
+        }
 
         return $this;
     }

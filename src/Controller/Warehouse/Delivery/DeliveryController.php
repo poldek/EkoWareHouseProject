@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Controller\User\Delivery;
+namespace App\Controller\Warehouse\Delivery;
 
-use App\Controller\User\SearchProduct\SearchProduct;
-use App\Repository\DocumentProductsRepository;
+use App\Controller\Warehouse\CheckStatus\CreateDocument;
+use App\Controller\Warehouse\Document\Document;
+use App\Controller\Warehouse\SearchProduct\SearchProduct;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,17 +16,19 @@ class DeliveryController extends AbstractController
     public function __construct(
         public UserRepository $userRepository,
         public SearchProduct $searchProduct,
-        public DocumentProductsRepository $documentProductsRepository,
+        public Document $document,
     )
-    {
-    }
+    {}
 
     #[Route('/delivery', name: 'app_delivery')]
     public function delivery(): Response
     {
+        $this->document->createDocument(CreateDocument::PZ);
+        $openDocument = $this->document->getDocument(CreateDocument::PZ);
         $userWarehouse = $this->userRepository->find($this->getUser()->getId());
         return $this->render('warehouse/delivery/index.html.twig',[
                 'warehouse' => $userWarehouse,
+                'openDocument' => $openDocument
         ]);
     }
 

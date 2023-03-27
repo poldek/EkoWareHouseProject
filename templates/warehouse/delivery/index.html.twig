@@ -5,6 +5,10 @@
 {% block body %}
     <div class="example-wrapper">
         <h3>Delivery</h3>
+        <code>
+            <a href={{ path('app_delivery_open_document') }}>Opened document :{{ openDocument.id }}</a>
+            Created: {{ openDocument.createdAt | date('d-M-Y') }}
+        </code>
         <hr>
         {% for message in app.flashes('info') %}
             <div class="flash search">
