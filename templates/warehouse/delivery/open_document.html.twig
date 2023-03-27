@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Document{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h3>Document delivery number: {{ openDocument.id }}</h3>
+        <code> Created: {{ openDocument.createdAt | date('d-M-Y') }}</code>
+        {% for message in app.flashes('upload') %}
+            <div class="flash search">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+        <br>
+        <a href="{{ path('app_delivery') }}"> <- Back</a>
+        <hr>
+        <div class="file-flex">
+                {{ form_start(form) }}
+                {{ form_row(form.name) }}
+                <div class="file-flex">
+                    <button type="submit"> Upload file</button>
+                </div>
+                {{ form_end(form) }}
+        </div>
+        <strong>Upload file</strong>
+        <table>
+            <tr>
+                <th width="70%">Name</th>
+                <th width="10%">Number</th>
+                <th width="20%">Date</th>
+            </tr>
+            {% for file in uploadFile %}
+                <tr>
+                    <td>{{ file.name }}</td>
+                    <td>{{ file.document.id }}</td>
+                    <td>{{ file.createdAt|date('d-M-Y') }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <strong>Selected product</strong>
+        <br />
+        <table>
+            <tr>
+                <th width="50%">Name</th>
+                <th width="10%">Unit</th>
+                <th width="10%">Qty</th>
+                <th width="30%">Price</th>
+                <th width="10%">Tax</th>
+            </tr>
+            {% for p in productDocument %}
+            <tr>
+                <td>{{ p.product.name }}</td>
+                <td>{{ p.productQty }}</td>
+                <td>{{ p.product.unit }}</td>
+                <td>{{ p.productPrice }}</td>
+                <td>{{ p.tax }}%</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if productDocument|length > 0 or uploadFile|length > 0%}
+        <div class="file-flex">
+            <a href="{{ path('app_delivery_document_save',{'document' : openDocument.id}) }}">Save the document</a>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

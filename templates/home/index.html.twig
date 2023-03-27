@@ -5,9 +5,20 @@
 {% block body %}
 
 <div class="example-wrapper">
+    {% if is_granted('ROLE_ADMIN') %}
+        <code>
+            Warehouse to ADMIN
+        </code>
+        <p>Admin</p>
+    {% endif %}
     <h2>Welcome back:  {{ app.user.username }}</h2>
 
     <h3>Main menu</h3>
+    {% for message in app.flashes('info') %}
+        <div class="flash search">
+            <strong>{{ message }}</strong>
+        </div>
+    {% endfor %}
     <ul>
         <li>
             <label for="warehouse">Warehouse:</label>

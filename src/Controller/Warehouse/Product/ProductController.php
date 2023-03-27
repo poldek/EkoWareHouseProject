@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\User\Product;
+namespace App\Controller\Warehouse\Product;
 
 use App\Repository\WarehousesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,8 +13,7 @@ class ProductController extends AbstractController
     public function __construct(
         public WarehousesRepository $warehousesRepository
     )
-    {
-    }
+    {}
 
     #[Route('/warehouse/product', name: 'app_product_warehouse')]
     public function product(Request $request): Response

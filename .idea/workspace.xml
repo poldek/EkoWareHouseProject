@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="Delivery document">
-      <change afterPath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/User/Issue/IssueController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/User/Issue/IssueProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/IssueProductType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/warehouse/issue/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/warehouse/issue/issue_product.html.twig" afterDir="false" />
+    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="Document&#10;&#10;-- added delivery product&#10;-- added issue product">
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7998e7cf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7b272563.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7ba57d14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/CheckStatus/CreateDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/OpenDocumentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/CloseDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/Document.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/FileManager/FileUpload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FileFormType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentFileRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/warehouse/delivery/open_document.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminDelivery/DocumentsCrudController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/Type.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/Service/DocumentType/TypeDocument.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductUnitCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductUnitCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/SearchProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/SearchProduct/SearchProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/DocumentType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/DeliveryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/DeliveryProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/Issue/IssueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/Issue/IssueProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Product/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/SearchProduct/SearchProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/SearchProduct/SearchProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Documents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Warehouses.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Warehouses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/DocumentProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DeliveryProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DocumentTypeRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DocumentsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DocumentsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/warehouse/delivery/delivery_product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/warehouse/delivery/delivery_product.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/warehouse/delivery/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/warehouse/delivery/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +246,7 @@
       <workItem from="1679759015317" duration="6556000" />
       <workItem from="1679817087693" duration="30099000" />
       <workItem from="1679896617684" duration="3052000" />
-      <workItem from="1679899718084" duration="1308000" />
+      <workItem from="1679899718084" duration="25868000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -305,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679844289556</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Document&#10;&#10;-- added delivery product&#10;-- added issue product">
+      <created>1679902185125</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679902185125</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +376,7 @@
     <MESSAGE value="WareHouse&#10;&#10;-- added new name input" />
     <MESSAGE value="User&#10;&#10;-- added panel user&#10;-- added select warehouse and product&#10;-- added security rule" />
     <MESSAGE value="Delivery document &#10;&#10;-- added show position, select by only user&#10;-- added search position by code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delivery document &#10;&#10;-- added show position, select by only user&#10;-- added search position by code" />
+    <MESSAGE value="Document&#10;&#10;-- added delivery product&#10;-- added issue product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Document&#10;&#10;-- added delivery product&#10;-- added issue product" />
   </component>
 </project>

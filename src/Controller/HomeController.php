@@ -20,5 +20,4 @@ class HomeController extends AbstractController
             'warehouses' => $warehouse
         ]);
     }
-
 }
