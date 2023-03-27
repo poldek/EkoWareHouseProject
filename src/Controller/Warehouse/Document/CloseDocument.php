@@ -12,8 +12,7 @@ class CloseDocument extends AbstractController
 {
     public function __construct(
         public DocumentsRepository $documentsRepository
-    )
-    {}
+    ){}
 
     #[Route('/delivery/document/save', name: 'app_delivery_document_save')]
     public function saveDocument(Request $request): RedirectResponse

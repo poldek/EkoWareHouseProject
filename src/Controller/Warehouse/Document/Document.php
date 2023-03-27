@@ -12,8 +12,7 @@ class Document
     public function __construct(
         public DocumentsRepository $documentsRepository,
         public CreateDocument $createDocument,
-    )
-    {}
+    ){}
 
     public function createDocument($type): void
     {

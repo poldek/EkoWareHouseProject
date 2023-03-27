@@ -1,37 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="Document&#10;&#10;-- added delivery product&#10;-- added issue product">
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7998e7cf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7b272563.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/note-6421a7ba57d14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/CheckStatus/CreateDocument.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/OpenDocumentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/CloseDocument.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/Document.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Warehouse/FileManager/FileUpload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/DocumentFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FileFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/DocumentFileRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/warehouse/delivery/open_document.html.twig" afterDir="false" />
+    <list default="true" id="67c36820-4c61-485e-9cd5-9fd8f204be73" name="Changes" comment="Delivery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductUnitCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductUnitCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/ProductsCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/WareHouse/WarehousesCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/DeliveryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Delivery/DeliveryProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/DeliveryProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Issue/IssueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Issue/IssueProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Product/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/SearchProduct/SearchProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/SearchProduct/SearchProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Documents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Documents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/warehouse/delivery/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/warehouse/delivery/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/OpenDocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Delivery/OpenDocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Warehouse/Document/CloseDocument.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/CloseDocument.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Warehouse/Document/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Document/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Warehouse/FileManager/FileUpload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Warehouse/Issue/IssueProduct.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +223,8 @@
       <workItem from="1679759015317" duration="6556000" />
       <workItem from="1679817087693" duration="30099000" />
       <workItem from="1679896617684" duration="3052000" />
-      <workItem from="1679899718084" duration="25868000" />
+      <workItem from="1679899718084" duration="26433000" />
+      <workItem from="1679928876835" duration="1014000" />
     </task>
     <task id="LOCAL-00001" summary="--First init&#10;&#10;-- create project &#10;-- first configure">
       <created>1679484649513</created>
@@ -318,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679902185125</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Delivery&#10;&#10;-- added upload file, max 4(xml/pdf)&#10;-- open close document delivery&#10;-- clear project">
+      <created>1679927537019</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679927537019</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +362,7 @@
     <MESSAGE value="User&#10;&#10;-- added panel user&#10;-- added select warehouse and product&#10;-- added security rule" />
     <MESSAGE value="Delivery document &#10;&#10;-- added show position, select by only user&#10;-- added search position by code" />
     <MESSAGE value="Document&#10;&#10;-- added delivery product&#10;-- added issue product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Document&#10;&#10;-- added delivery product&#10;-- added issue product" />
+    <MESSAGE value="Delivery&#10;&#10;-- added upload file, max 4(xml/pdf)&#10;-- open close document delivery&#10;-- clear project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delivery&#10;&#10;-- added upload file, max 4(xml/pdf)&#10;-- open close document delivery&#10;-- clear project" />
   </component>
 </project>

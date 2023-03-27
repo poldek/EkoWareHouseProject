@@ -14,8 +14,7 @@ class IssueProduct extends AbstractController
 {
 
     public function __construct(public ProductsRepository $productsRepository)
-    {
-    }
+    {}
 
     #[Route('/issue/product', name: 'app_issue_product')]
     public function deliveryProduct(Request $request): Response
@@ -27,7 +26,7 @@ class IssueProduct extends AbstractController
         $form = $this->createForm(IssueProductType::class, $documentProduct);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $deliveryProduct = $form->getData();
+            $issueProduct = $form->getData();
             $this->addFlash('info', 'Product has been saved');
             return $this->redirectToRoute('app_issue');
         }
