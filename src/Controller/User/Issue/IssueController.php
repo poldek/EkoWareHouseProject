@@ -1,37 +1,37 @@
 <?php
 
-namespace App\Controller\User\Delivery;
+namespace App\Controller\User\Issue;
 
 use App\Controller\User\SearchProduct\SearchProduct;
 use App\Repository\DocumentProductsRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DeliveryController extends AbstractController
+class IssueController
+    extends AbstractController
 {
     public function __construct(
-        public UserRepository $userRepository,
-        public SearchProduct $searchProduct,
+        public UserRepository             $userRepository,
+        public SearchProduct              $searchProduct,
         public DocumentProductsRepository $documentProductsRepository,
-    )
-    {
-    }
+    ){}
 
-    #[Route('/delivery', name: 'app_delivery')]
+    #[Route('/issue', name: 'app_issue')]
     public function delivery(): Response
     {
         $userWarehouse = $this->userRepository->find($this->getUser()->getId());
-        return $this->render('warehouse/delivery/index.html.twig',[
-                'warehouse' => $userWarehouse,
+        return $this->render('warehouse/issue/index.html.twig', [
+            'warehouse' => $userWarehouse,
         ]);
     }
 
 
-    #[Route('/delivery/search', name: 'app_delivery_search')]
-    public function deliverySearch(Request $request,)
+    #[Route('/issue/search', name: 'app_issue_search')]
+    public function deliverySearch(Request $request,): RedirectResponse
     {
 
         $search = $request->get('search');
@@ -39,10 +39,10 @@ class DeliveryController extends AbstractController
 
         if(!$product){
             $this->addFlash('info', 'The searched code does not exist');
-            return $this->redirectToRoute('app_delivery');
+            return $this->redirectToRoute('app_issue');
         }
-            return $this->redirectToRoute('app_delivery_product', [
-                'search' => $product->getId()
-            ]);
+        return $this->redirectToRoute('app_issue_product', [
+            'search' => $product->getId()
+        ]);
     }
 }

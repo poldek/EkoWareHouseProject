@@ -39,6 +39,5 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Product', 'fa fa-bars', Products::class),
             MenuItem::linkToCrud('Unit', 'fa fa-bars', ProductUnit::class)
         ])->setPermission('ROLE_ADMIN');
-        //yield MenuItem::linkToCrud('DeliveryUser', 'fa fa-bars', Documents::class);
     }
 }
